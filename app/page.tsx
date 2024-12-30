@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText } from 'lucide-react';
+import MissionSection from './components/MissionSection';
+import AuthorGuidelines from './components/AuthorGuidelines';
 
 const Home: React.FC = () => {
   const [activeSection, setActiveSection] = useState<null | string>(null);
