@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText } from 'lucide-react';
+import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper, User } from 'lucide-react';
 import MissionSection from './components/MissionSection';
 import AuthorGuidelines from './components/AuthorGuidelines';
 
@@ -45,13 +45,13 @@ const Home: React.FC = () => {
         <a href="#contact" className="border border-black px-2 py-1 hover:bg-black hover:text-white">CONTACT</a>
       </nav>
 
-      {/* Hero Section */}
-      <section className="h-screen flex flex-col items-center justify-center p-8 border-b border-black">
+       {/* Hero Section */}
+       <section className="h-screen flex flex-col items-center justify-center p-8 border-b border-black">
         <h1 className="text-3xl mb-4 flex items-center gap-2">
           PAPER HAG PRESS
           <span className="animate-pulse">_</span>
         </h1>
-        <p className="mb-8 opacity-70">a micropress obsessed with paper</p>
+        <p className="mb-8 opacity-70">a paper/pixel micropress</p>
         <div className="flex items-center gap-2">
           <ArrowDown className="w-4 h-4 animate-bounce" />
           <span className="text-sm">scroll to explore</span>
@@ -87,7 +87,27 @@ const Home: React.FC = () => {
           </ul>
         </div>
       </section>
-
+ {/* Roadmap Section */}
+ <section id="roadmap" className="min-h-screen p-8 border-b border-black flex flex-col justify-center">
+        <h2 className="text-xl mb-8 flex items-center gap-2">
+          <MapPin className="w-5 h-5" />
+          ROADMAP
+        </h2>
+        <div className="max-w-2xl space-y-6">
+          <div className="border border-black p-6">
+            <h3 className="font-bold mb-2">PHASE 1: PILOT</h3>
+            <p>Single chapbook experiment testing digital integration</p>
+          </div>
+          <div className="border border-black p-6">
+            <h3 className="font-bold mb-2">PHASE 2: SEASON ONE</h3>
+            <p>Four invited poets, one collaborative season</p>
+          </div>
+          <div className="border border-black p-6">
+            <h3 className="font-bold mb-2">PHASE 3: OPEN SUBMISSIONS</h3>
+            <p>Expanding to accept submissions for future seasons</p>
+          </div>
+        </div>
+      </section>
       {/* Season Section */}
       <section id="season" className="min-h-screen p-8 border-b border-black flex flex-col justify-center">
         <h2 className="text-xl mb-8 flex items-center gap-2">
@@ -105,7 +125,53 @@ const Home: React.FC = () => {
           ))}
         </div>
       </section>
+{/* News Section */}
+<section id="news" className="min-h-screen p-8 border-b border-black flex flex-col justify-center">
+        <h2 className="text-xl mb-8 flex items-center gap-2">
+          <Newspaper className="w-5 h-5" />
+          NEWS
+        </h2>
+        <div className="max-w-2xl space-y-6">
+          <article className="border-b border-black pb-4">
+            <p className="text-sm mb-2">30 DEC 2024</p>
+            <h3 className="font-bold mb-2">Launch Announcement</h3>
+            <p>Paper Hag Press emerges from the swamp...</p>
+          </article>
+        </div>
+      </section>
 
+      {/* Masthead Section */}
+      <section id="masthead" className="min-h-screen p-8 border-b border-black flex flex-col justify-center">
+        <h2 className="text-xl mb-8 flex items-center gap-2">
+          <User className="w-5 h-5" />
+          MASTHEAD
+        </h2>
+        <div className="max-w-2xl">
+          <h3 className="font-bold mb-4">EDITOR</h3>
+          <p>[Your bio will go here]</p>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section id="newsletter" className="min-h-screen p-8 flex flex-col justify-center">
+        <h2 className="text-xl mb-8 flex items-center gap-2">
+          <Mail className="w-5 h-5" />
+          NEWSLETTER
+        </h2>
+        <div className="max-w-md space-y-4">
+          <p>Stay updated on our progress:</p>
+          <form className="space-y-4">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="w-full bg-transparent border-b border-black p-2 focus:outline-none font-mono"
+            />
+            <button className="w-full border border-black p-2 hover:bg-black hover:text-white transition-colors">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div>
+      </section>
       {/* Access Section */}
       <section id="access" className="min-h-screen p-8 border-b border-black flex flex-col justify-center">
         <h2 className="text-xl mb-8 flex items-center gap-2">
