@@ -48,7 +48,7 @@ const Home: React.FC = () => {
        {/* Hero Section */}
        <section className="h-screen flex flex-col items-center justify-center p-8 border-b border-black">
         <h1 className="text-3xl mb-4 flex items-center gap-2">
-          PAPER HAG PRESS
+          paper hag ✌︎✂︎
           <span className="animate-pulse">_</span>
         </h1>
         <p className="mb-8 opacity-70">a paper/pixel micropress</p>
