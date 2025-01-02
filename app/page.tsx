@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper, User } from 'lucide-react';
+import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper, User, } from 'lucide-react';
 import MissionSection from './components/MissionSection';
 import AuthorGuidelines from './components/AuthorGuidelines';
 
