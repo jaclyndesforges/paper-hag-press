@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper, User, } from 'lucide-react';
 import MissionSection from './components/MissionSection';
 import AuthorGuidelines from './components/AuthorGuidelines';
+import EditorSection from './components/EditorSection';
 
 const Home: React.FC = () => {
   const [activeSection, setActiveSection] = useState<null | string>(null);
@@ -159,15 +160,8 @@ const Home: React.FC = () => {
           </article>
         </section>
 
-        {/* Masthead Section */}
-        <section id="masthead" className="border border-black p-6">
-          <h2 className="text-xl mb-8 flex items-center gap-2">
-            <User className="w-5 h-5" />
-            MASTHEAD
-          </h2>
-          <h3 className="font-bold mb-4">EDITOR</h3>
-          <p>[Your bio will go here]</p>
-        </section>
+       {/* Editor Section */}
+<EditorSection />
 
         {/* Access Section */}
         <section id="access" className="border border-black p-6">
