@@ -15,9 +15,9 @@ const EditorSection = () => {
         {/* Polaroid Image */}
         <div className="flex justify-center md:justify-start">
           <div className="relative" style={{ width: 'fit-content' }}>
-            <div className="bg-white p-3 pb-6 shadow-lg transform hover:rotate-1 transition-transform duration-300 cursor-pointer">
+            <div className="bg-white p-3 pb-6 shadow-lg transform hover:rotate-1 transition-transform duration-300">
               <img 
-                src="/facebw.png" 
+                src="/jaclynlinocut.png" 
                 alt="Editor Jaclyn Desforges"
                 className="w-64 h-auto grayscale"
               />

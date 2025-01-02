@@ -54,12 +54,15 @@ const Home: React.FC = () => {
   </a>
 </nav>
 
-      {/* Hero Section - Kept Original */}
-      <section className="h-screen flex flex-col items-center justify-center p-8 border-b border-black">
-        <h1 className="text-3xl mb-4 flex items-center gap-2">
-          paper hag ✌︎✂︎
-          <span className="animate-pulse">_</span>
-        </h1>
+     {/* Hero Section */}
+     <section className="h-screen flex flex-col items-center justify-center p-8 border-b border-black">
+        <div className="mb-4 flex items-center justify-center">
+          <img
+            src="/logobw.png"
+            alt="Paper Hag Press"
+            className="h-36 w-auto transform transition-all duration-300 hover:rotate-1 hover:scale-105 hover:-translate-y-1"
+          />
+        </div>
         <p className="mb-8 opacity-70">a paper/pixel micropress</p>
         <div className="flex items-center gap-2">
           <ArrowDown className="w-4 h-4 animate-bounce" />
