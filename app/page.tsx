@@ -70,13 +70,16 @@ const Home: React.FC = () => {
       <div className="max-w-4xl mx-auto p-8 space-y-12">
         {/* About Section */}
         <section id="about" className="border border-black p-6">
-          <h2 className="text-xl mb-8 flex items-center gap-2">
-            <Ghost className="w-5 h-5" />
+            <h2 className="text-xl mb-8 flex items-center gap-2">
+            <Book className="w-5 h-5" />
             ABOUT
-          </h2>
+            </h2>
           <div className="space-y-4">
-            <p>Paper Hag Press creates experimental chapbooks that bridge physical and digital realms. Each physical chapbook is a key to its own digital universe.</p>
-            <p>Founded in 2024, we specialize in:</p>
+            <p>Paper Hag is an experimental micropress in which each chapbook holds the key to its own digital universe. Founded in 2024 by award-winning author Jaclyn Desforges, Paper Hag specializes in creating unique reading experiences that bridge the boundary between paper and pixel. </p>
+
+<p>We believe in the magic of paper, the nostalgia of early web aesthetics, and the power of bringing surprise and delight to literary spaces. Each publication is both a physical artifact and a digital journey, unlocking interactive elements that draw attention to the space/time-bridging connection between reader and writer. </p>
+
+<p>Paper Hag chapbooks combine the preciousness of paper and in-person community building with the accessibility and delight of digital adventure. Buy a chap in-person at your local craft fair, poetry reading or indie bookstore and receive a unique access code that unlocks its digital companion -- a carefully crafted online experience featuring interactive readings, hidden content, and multimedia elements. We also offer access to digital-only readers, including season passes that grant access to our full virtual carnival of literary experiments.</p>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
                 <ArrowRight className="w-4 h-4" />
@@ -227,8 +230,8 @@ const Home: React.FC = () => {
           <div className="space-y-4">
             <p className="flex items-center gap-2">
               <FileText className="w-4 h-4" />
-              <a href="mailto:hello@paperhag.press" className="hover:underline">
-                hello@paperhag.press
+              <a href="mailto:hello@paperhag.ca" className="hover:underline">
+                hello@paperhag.ca
               </a>
             </p>
             <p className="flex items-center gap-2">
