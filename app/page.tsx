@@ -1,4 +1,5 @@
 'use client';
+import React, { useEffect, useState } from 'react';
 import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper } from 'lucide-react';
 import EditorSection from './components/EditorSection';
 import Image from 'next/image';
@@ -31,8 +32,32 @@ const Home: React.FC = () => {
     }
   ];
 
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    <div className="relative pt-16 min-h-screen bg-white font-mono text-black cursor-crosshair">
+    <div className="relative pt-16 min-h-screen bg-white font-mono text-black">
+      {/* Sparkly Cursor */}
+      <Image
+  src="/cursor.png"
+  alt="Custom Cursor"
+  width={32} // Adjust width (e.g., 32px for h-8)
+  height={32} // Adjust height (e.g., 32px for w-8)
+  className="pointer-events-none fixed z-50 transform translate-x-[-50%] translate-y-[-50%]"
+  style={{
+    left: `${cursorPosition.x}px`,
+    top: `${cursorPosition.y}px`,
+  }}
+/>
+
     {/* Marquee Section */}
     <div className="absolute top-0 left-0 right-0 overflow-hidden whitespace-nowrap bg-black text-white">
       <div className="animate-marquee flex space-x-8 py-2">
