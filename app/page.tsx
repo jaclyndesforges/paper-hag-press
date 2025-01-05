@@ -1,13 +1,9 @@
 'use client';
-
-import React, { useState } from 'react';
-import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper, User, } from 'lucide-react';
-import MissionSection from './components/MissionSection';
-import AuthorGuidelines from './components/AuthorGuidelines';
+import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper,} from 'lucide-react';
 import EditorSection from './components/EditorSection';
+import Image from 'next/image';
 
 const Home: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<null | string>(null);
 
   const seasonChapbooks = [
     {
@@ -57,11 +53,15 @@ const Home: React.FC = () => {
      {/* Hero Section */}
      <section className="h-screen flex flex-col items-center justify-center p-8 border-b border-black">
         <div className="mb-4 flex items-center justify-center">
-          <img
-            src="/logobw.png"
-            alt="Paper Hag Press"
-            className="h-36 w-auto transform transition-all duration-300 hover:rotate-1 hover:scale-105 hover:-translate-y-1"
-          />
+        <Image
+  src="/logobw.png"
+  alt="Paper Hag Press"
+  width={144} // Specify the width (e.g., 144 for h-36 * 4, matching Tailwind's scale)
+  height={144} // Specify the height or adjust proportionally
+  className="transform transition-all duration-300 hover:rotate-1 hover:scale-105 hover:-translate-y-1"
+  priority // Optional: Ensures the image loads faster (useful for logo/header images)
+ />
+
         </div>
         <p className="mb-8 opacity-70">a paper/pixel micropress</p>
         <div className="flex items-center gap-2">
