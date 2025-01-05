@@ -1,0 +1,12 @@
+{
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "tailwindCSS.includeLanguages": {
+      "plaintext": "css"
+    },
+    "css.validate": false,
+    "scss.validate": false,
+    "less.validate": false
+  }
+  
