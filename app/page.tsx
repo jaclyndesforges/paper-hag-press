@@ -1,10 +1,9 @@
 'use client';
-import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper,} from 'lucide-react';
+import { Sparkles, Book, Key, Lock, ArrowDown, ArrowRight, Ghost, Mail, FileText, MapPin, Newspaper } from 'lucide-react';
 import EditorSection from './components/EditorSection';
 import Image from 'next/image';
 
 const Home: React.FC = () => {
-
   const seasonChapbooks = [
     {
       title: "GHOST LETTERS",
@@ -33,35 +32,46 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white font-mono text-black cursor-crosshair">
-      {/* Fixed Navigation */}
-      <nav className="fixed top-4 right-4 flex gap-2 text-xs">
-  <a href="#about" className="border border-black px-2 py-1 hover:bg-black hover:text-white group flex items-center gap-1">
-    ABOUT<span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-  </a>
-  <a href="#season" className="border border-black px-2 py-1 hover:bg-black hover:text-white group flex items-center gap-1">
-    SEASON<span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-  </a>
-  <a href="#access" className="border border-black px-2 py-1 hover:bg-black hover:text-white group flex items-center gap-1">
-    ACCESS<span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-  </a>
-  <a href="#contact" className="border border-black px-2 py-1 hover:bg-black hover:text-white group flex items-center gap-1">
-    CONTACT<span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-  </a>
-</nav>
+    <div className="relative pt-16 min-h-screen bg-white font-mono text-black cursor-crosshair">
+    {/* Marquee Section */}
+    <div className="absolute top-0 left-0 right-0 overflow-hidden whitespace-nowrap bg-black text-white">
+      <div className="animate-marquee flex space-x-8 py-2">
+        <span className="mx-4">✨ Welcome to Paper Hag Press ✦ A paper/pixel micropress ✨</span>
+        <span className="mx-4">📖 Explore our chapbooks ✦ Hidden content awaits 📖</span>
+        <span className="mx-4">💌 Join the community ✦ Dive into interactive experiences 💌</span>
+        <span className="mx-4">✨ Welcome to Paper Hag Press ✦ A paper/pixel micropress ✨</span>
+        <span className="mx-4">📖 Explore our chapbooks ✦ Hidden content awaits 📖</span>
+        <span className="mx-4">💌 Join the community ✦ Dive into interactive experiences 💌</span>
+      </div>
+    </div>
+  
+    {/* Fixed Navigation */}
+    <nav className="fixed top-16 right-4 flex gap-2 text-xs z-10">
+      <a href="#about" className="border border-black px-2 py-1 hover:bg-black hover:text-white group flex items-center gap-1">
+        ABOUT<span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+      </a>
+      <a href="#season" className="border border-black px-2 py-1 hover:bg-black hover:text-white group flex items-center gap-1">
+        SEASON<span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+      </a>
+      <a href="#access" className="border border-black px-2 py-1 hover:bg-black hover:text-white group flex items-center gap-1">
+        ACCESS<span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+      </a>
+      <a href="#contact" className="border border-black px-2 py-1 hover:bg-black hover:text-white group flex items-center gap-1">
+        CONTACT<span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+      </a>
+    </nav>
 
-     {/* Hero Section */}
-     <section className="h-screen flex flex-col items-center justify-center p-8 border-b border-black">
+      {/* Hero Section */}
+      <section className="h-screen flex flex-col items-center justify-center p-8 border-b border-black">
         <div className="mb-4 flex items-center justify-center">
-        <Image
-  src="/logobw.png"
-  alt="Paper Hag Press"
-  width={144} // Specify the width (e.g., 144 for h-36 * 4, matching Tailwind's scale)
-  height={144} // Specify the height or adjust proportionally
-  className="transform transition-all duration-300 hover:rotate-1 hover:scale-105 hover:-translate-y-1"
-  priority // Optional: Ensures the image loads faster (useful for logo/header images)
- />
-
+          <Image
+            src="/logobw.png"
+            alt="Paper Hag Press"
+            width={144}
+            height={144}
+            className="transform transition-all duration-300 hover:rotate-1 hover:scale-105 hover:-translate-y-1"
+            priority
+          />
         </div>
         <p className="mb-8 opacity-70">a paper/pixel micropress</p>
         <div className="flex items-center gap-2">
