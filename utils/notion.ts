@@ -26,6 +26,8 @@ export const fetchDatabase = async (databaseId: string): Promise<Post[]> => {
         database_id: databaseId,
       });
   
+      console.log(response.results); // Log the response here for debugging
+  
       // Filter and cast items to only include those with 'properties'
       return response.results.filter(
         (item): item is PageObjectResponse => 'properties' in item

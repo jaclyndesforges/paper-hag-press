@@ -17,6 +17,7 @@ type Post = {
     };
   };
 };
+console.log('Database ID:', process.env.NEXT_PUBLIC_NOTION_DATABASE_ID);
 
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
